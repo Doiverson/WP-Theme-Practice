@@ -21,6 +21,14 @@
                             <h1><?php the_title(); ?></h1>
                             <!--Custom Fieldプラグインのラベル名、カスタムポストのみに使える-->
                             <p><?php the_field('description'); ?></p>
+
+                            <hr>
+
+                            <p>
+                                <?php previous_post_link(); ?> -
+                                <a href="<?php bloginfo('url'); ?>/portfolio">Back to Portfolio</a> -
+                                <?php next_post_link() ?>
+                            </p>
                         </div>
                     </div>
                 <?php endwhile; endif; ?>
