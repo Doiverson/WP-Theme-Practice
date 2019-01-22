@@ -1,7 +1,7 @@
 <?php
 
-add_theme_support( 'menus' );
-add_theme_support( 'post-thumbnails' );
+add_theme_support( 'menus' ); /*ナビゲーションバー追加*/
+add_theme_support( 'post-thumbnails' ); /*アイキャッチ画像設定追加*/
 
 function register_theme_menus() {
 	register_nav_menus(
