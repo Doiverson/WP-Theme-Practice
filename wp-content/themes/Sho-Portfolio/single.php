@@ -9,14 +9,14 @@
 
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                            <article <?php post_class('post'); ?>>
+                            <article class="post">
+
                                 <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                                <h2><?php echo strip_tags( get_the_excerpt() ); ?></h2>
                                 <ul class="post-meta no-bullet">
                                     <li class="author">
-                      <span class="wpt-avatar small">
-                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 24 ); ?>
-                      </span>
+	                  <span class="wpt-avatar small">
+	                    <?php echo get_avatar( get_the_author_meta( 'ID' ), 24 ); ?>
+	                  </span>
                                         by <?php the_author_posts_link(); ?>
                                     </li>
                                     <li class="cat">in <?php the_category( ', ' ); ?></li>
@@ -27,19 +27,22 @@
 										<?php the_post_thumbnail('large'); ?>
                                     </div>
 								<?php endif; ?>
+
+								<?php the_content(); ?>
+								<?php comments_template(); ?> <!-- デフォルト仕様のコメント欄追加。-->
+
                             </article>
 
-                            <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-                            <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
 						<?php endwhile; else : ?>
 
-                            <p><?php _e( 'Sorry, no pages found.' ); ?></p>
+                            <p><?php _e( 'Sorry, no posts found.', 'treehouse-portfolio' ); ?></p>
 
 						<?php endif; ?>
 
                     </div>
                 </div>
+
 
 				<?php get_sidebar(); ?>
 
