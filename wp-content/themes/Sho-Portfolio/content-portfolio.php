@@ -1,7 +1,8 @@
 
 
 <?php
-$num_posts = ( is_front_page() ) ? 4 : -1;
+
+$num_posts = ( is_front_page() ) ? 4 : -1; /*三項演算子*/
 
 $args = array(
 	'post_type' => 'portfolio2', /*Post Type Slugと同じ名前*/

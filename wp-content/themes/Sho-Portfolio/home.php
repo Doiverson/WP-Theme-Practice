@@ -11,7 +11,7 @@
 
                             <article <?php post_class('post'); ?>>
                                 <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                                <h2><?php echo strip_tags( get_the_excerpt() ); ?></h2>
+                                <h2><?php echo strip_tags( get_the_excerpt() ); ?></h2> /*抜粋文の表示とテキストだけ取り出す為のタグの除去*/
                                 <ul class="post-meta no-bullet">
                                     <li class="author">
                       <span class="wpt-avatar small">

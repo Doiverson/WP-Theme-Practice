@@ -6,7 +6,7 @@ add_theme_support( 'post-thumbnails' ); /*アイキャッチ画像設定追加*/
 function wpt_excerpt_length($length) {
 	return 16;
 }
-add_filter( 'excerpt_length', 'wpt_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'wpt_excerpt_length', 999 ); /*表示する文字数指定*/
 
 function register_theme_menus() {
 	register_nav_menus(
